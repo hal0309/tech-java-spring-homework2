@@ -11,7 +11,7 @@ import java.util.List;
 @RequestMapping("wine")
 public class WineController {
 
-    private static String wineCsvPath = "src/main/resources/static/winemag-data-130k-v2.csv";
+    private static String wineCsvPath = "src/main/resources/static/wine-1k.csv";
 
     // csvを読み込んで、List<String>に変換(サイズが大きいので、100件に制限)
     List<String> rawCsvList = LoadCsvUtil.convertCsvToStringList(wineCsvPath).subList(1, 101);

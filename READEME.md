@@ -9,7 +9,7 @@
 今回は、ワインの通販サイトのバックエンドプログラムを作成する想定です。  
 ワインのデータがまとめてあるcsvファイルを読み込み、適切に処理してください。
 
-ワインのデータセットはKaggleより引用しています。([Wine Reviews](https://www.kaggle.com/zynicide/wine-reviews))
+ワインのデータセットはKaggleの[Wine Reviews](https://www.kaggle.com/zynicide/wine-reviews)より引用し、データ数を1000件に制限しています。
 
 ラベルと内容の対応関係を以下を参考にしてください。
 
