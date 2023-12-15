@@ -16,7 +16,10 @@ public class WineController {
     // csvを読み込んで、List<String>に変換(サイズが大きいので、100件に制限)
     List<String> rawCsvList = LoadCsvUtil.convertCsvToStringList(wineCsvPath).subList(1, 101);
 
-    // todo: rawCsvListをWineクラスのリストに変換する
+    List<String[]> splittedCsvList = LoadCsvUtil.splitStringList(rawCsvList);
+
+
+    // todo: splittedCsvListをWineクラスのリストに変換する
 //    List</*定義したWineクラス*/> wineList = /* Wineクラスのリスト */;
 
 
@@ -29,6 +32,6 @@ public class WineController {
     // todo: wineListを返すエンドポイント作成する
 //    @GetMapping("getWineList")
 //    public List</*定義したWineクラス*/> getWineList(){
-//    }
+
 
 }
