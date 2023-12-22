@@ -19,7 +19,6 @@ public class WineController {
 
     List<String[]> splittedCsvList = LoadCsvUtil.splitStringList(rawCsvList);
 
-
     int WINE_INDEX_COUNTRY = 1;
     int WINE_INDEX_POINTS = 4;
     int WINE_INDEX_PRICE = 5;
@@ -46,5 +45,24 @@ public class WineController {
         return wineList;
     }
 
+    /** wineクラスのリストを返す(ポイントでソート) */
+    @GetMapping("getWineListSortByPoints")
+    public List<Wine> getWineListSortByPoints() {
+        return wineList.stream()
+                .sorted((a, b) -> b.getPointsInt() - a.getPointsInt())
+                .toList();
+    }
+
+//    // todo: wineクラスのリストを返すメソッドの作成(アメリカ産のワインのみ)
+//    @GetMapping("getWineListUS")
+//    public List<Wine> getWineListUS() {}
+
+//    // todo: wineクラスのリストを返すメソッドの作成(イタリア産のワインのみ)
+//    @GetMapping("getWineListItaly")
+//    public List<Wine> getWineListItaly() {}
+
+    // todo: wineクラスのリストを返すメソッドの作成(価格でソート)
+//    @GetMapping("getWineListSortByPrice")
+//    public List<Wine> getWineListSortByPrice() {}
 
 }
