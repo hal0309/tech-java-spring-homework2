@@ -53,16 +53,28 @@ public class WineController {
                 .toList();
     }
 
-//    // todo: wineクラスのリストを返すメソッドの作成(アメリカ産のワインのみ)
-//    @GetMapping("getWineListUS")
-//    public List<Wine> getWineListUS() {}
+    /** wineクラスのリストを返す(アメリカ産のワインのみ) */
+    @GetMapping("getWineListUS")
+    public List<Wine> getWineListUS() {
+        return wineList.stream()
+                .filter(w -> w.country().equals("US"))
+                .toList();
+    }
 
-//    // todo: wineクラスのリストを返すメソッドの作成(イタリア産のワインのみ)
-//    @GetMapping("getWineListItaly")
-//    public List<Wine> getWineListItaly() {}
+    /** wineクラスのリストを返す(イタリア産のワインのみ) */
+    @GetMapping("getWineListItaly")
+    public List<Wine> getWineListItaly() {
+        return wineList.stream()
+                .filter(w -> w.country().equals("Italy"))
+                .toList();
+    }
 
-    // todo: wineクラスのリストを返すメソッドの作成(価格でソート)
-//    @GetMapping("getWineListSortByPrice")
-//    public List<Wine> getWineListSortByPrice() {}
+    /** wineクラスのリストを返す(価格でソート) */
+    @GetMapping("getWineListSortByPrice")
+    public List<Wine> getWineListSortByPrice() {
+        return wineList.stream()
+                .sorted((a, b) -> (int) ((b.getPriceDouble() - a.getPriceDouble()) * 10))
+                .toList();
+    }
 
 }
