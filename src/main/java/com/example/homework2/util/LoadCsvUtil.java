@@ -1,11 +1,15 @@
 package com.example.homework2.util;
 
+import com.example.homework2.model.Wine;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -35,6 +39,17 @@ public class LoadCsvUtil {
         for(String l : stringList){
             result.add(splitLineWithComma(l));
         }
+        return result;
+    }
+
+    public static List<Wine> convertWine(List<String[]> stringList){
+        List<Wine> result = new ArrayList<>();
+
+        for(String[] l : stringList){
+            Wine wine = new Wine(Integer.parseInt(l[0]),l[1],l[2],l[3]);
+            result.add(wine);
+        }
+
         return result;
     }
 
