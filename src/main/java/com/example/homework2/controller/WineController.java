@@ -2,11 +2,10 @@ package com.example.homework2.controller;
 
 import com.example.homework2.model.Wine;
 import com.example.homework2.util.LoadCsvUtil;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("wine")
@@ -38,6 +37,26 @@ public class WineController {
     public List<String> getRawCsv(){
         return rawCsvList;
     }
+
+
+
+
+
+//    /** wineクラスのリストを返す(ソート・フィルタ機能付き) */
+//    @GetMapping("getWineList")
+//    public List<Wine> getWineList(
+//            @RequestBody Map<String, String> body
+//    ){
+//        // テスト出力
+//        System.out.println(body.toString());
+//
+//        // todo: ここにソート・フィルタ機能を実装
+//
+//        return wineList;
+//    }
+
+
+    /* todo: -------------- 以下のエンドポイントは全て削除 ------------------------- */
 
     /** wineクラスのリストを返す */
     @GetMapping("getWineList")
