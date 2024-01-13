@@ -89,4 +89,5 @@ public class WineController {
                     .stream()
                     .sorted(Comparator.comparingDouble(Wine::getPriceDouble));
     }
+
 }

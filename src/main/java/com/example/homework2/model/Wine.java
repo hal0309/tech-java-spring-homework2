@@ -28,4 +28,5 @@ public record Wine(
         }
         return priceDouble;
     }
+
 }
