@@ -17,6 +17,16 @@ public record Wine(
         return pointsInt;
     }
 
-
     //todo: 適宜メソッドを追加
+    /** priceをdoubleに変換して返す(数値では無い場合0を返す) */
+    public double getPriceDouble(){
+        double priceDouble;
+        try {
+            priceDouble = Double.parseDouble(price);
+        } catch (NumberFormatException e) {
+            priceDouble = 0;
+        }
+        return priceDouble;
+    }
+
 }

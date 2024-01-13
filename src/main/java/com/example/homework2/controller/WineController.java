@@ -6,7 +6,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Stream;
+
+import static java.util.Arrays.stream;
 
 @RestController
 @RequestMapping("wine")
@@ -53,16 +58,36 @@ public class WineController {
                 .toList();
     }
 
-//    // todo: wineクラスのリストを返すメソッドの作成(アメリカ産のワインのみ)
-//    @GetMapping("getWineListUS")
-//    public List<Wine> getWineListUS() {}
+    // todo: wineクラスのリストを返すメソッドの作成(アメリカ産のワインのみ)
+    @GetMapping("getWineListUS")
+    public List<Wine> getWineListUS() {
+        List<Wine> usWine =new ArrayList<>();
+        for(Wine usWineList:wineList){
+            if(usWineList.country().equals("US")){
+                usWine.add(usWineList);
+            }
+        }
+        return usWine;
+    }
 
-//    // todo: wineクラスのリストを返すメソッドの作成(イタリア産のワインのみ)
-//    @GetMapping("getWineListItaly")
-//    public List<Wine> getWineListItaly() {}
+    // todo: wineクラスのリストを返すメソッドの作成(イタリア産のワインのみ)
+    @GetMapping("getWineListItaly")
+    public List<Wine> getWineListItaly() {
+        List<Wine> italyWine =new ArrayList<>();
+        for(Wine italyWineList:wineList){
+            if(italyWineList.country().equals("Italy")){
+                italyWine.add(italyWineList);
+            }
+        }
+        return italyWine;
+    }
 
     // todo: wineクラスのリストを返すメソッドの作成(価格でソート)
-//    @GetMapping("getWineListSortByPrice")
-//    public List<Wine> getWineListSortByPrice() {}
+    @GetMapping("getWineListSortByPrice")
+    public Stream<Wine> getWineListSortByPrice() {
+            return wineList
+                    .stream()
+                    .sorted(Comparator.comparingDouble(Wine::getPriceDouble));
+    }
 
 }
