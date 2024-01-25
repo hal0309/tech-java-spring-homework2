@@ -22,7 +22,7 @@ public class BeerController {
     List<String> rawCsvList = LoadCsvUtil.convertCsvToStringList(beerCsvPath).subList(1, 101);
 
 
-    /** wine-1k.csvのを文字列リストにしただけのリストを返す */
+    /** beer.csvのを文字列リストにしただけのリストを返す */
     @GetMapping("getRawCsv")
     public List<String> getRawCsv(){
         return rawCsvList;
