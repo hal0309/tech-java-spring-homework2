@@ -1,0 +1,202 @@
+,country,points,price,province
+0,US,85,27.5,Oregon
+1,Germany,90,30,Berlin
+2,Belgium,88,45.5,Brussels
+3,France,82,36.8,Bordeaux
+4,Italy,87,50.2,Tuscany
+5,Spain,89,42.0,Rioja
+6,Australia,86,38.5,Victoria
+7,Canada,84,31.2,Ontario
+8,Argentina,83,34.7,Mendoza
+9,New Zealand,80,48.9,Marlborough
+10,Chile,85,40.0,Colchagua
+11,US,88,33.5,California
+12,Germany,82,35.0,Bavaria
+13,Belgium,90,55.7,Brussels
+14,France,85,44.6,Champagne
+15,Italy,89,47.8,Piedmont
+16,Spain,84,39.3,Catalonia
+17,Australia,87,46.0,Western Australia
+18,Canada,80,32.4,British Columbia
+19,Argentina,86,41.5,San Juan
+20,New Zealand,83,37.2,Hawke's Bay
+21,Chile,88,43.8,Maipo Valley
+22,US,82,30.0,Washington
+23,Germany,85,38.5,Saxony
+24,Belgium,89,60.2,Wallonia
+25,France,84,42.0,Alsace
+26,Italy,87,49.6,Lombardy
+27,Spain,88,47.2,Navarra
+28,Australia,86,38.9,South Australia
+29,Canada,85,36.7,Quebec
+30,Argentina,90,55.0,Salta
+31,New Zealand,83,34.0,Gisborne
+32,Chile,89,41.8,Casablanca Valley
+33,US,84,31.9,New York
+34,Germany,82,35.5,Hesse
+35,Belgium,88,52.4,Flemish Brabant
+36,France,85,45.3,Burgundy
+37,Italy,89,48.7,Sicily & Sardinia
+38,Spain,87,40.1,Valencia
+39,Australia,86,37.5,Tasmania
+40,Canada,83,33.6,Nova Scotia
+41,Argentina,90,58.3,Mendoza
+42,New Zealand,81,35.8,Marlborough
+43,Chile,88,42.7,Rapel Valley
+44,US,85,29.8,Oregon
+45,Germany,89,53.0,Württemberg
+46,Belgium,86,49.5,West Flanders
+47,France,82,38.2,Languedoc-Roussillon
+48,Italy,88,44.9,Veneto
+49,Spain,84,37.4,Castilla y León
+50,Australia,89,46.6,New South Wales
+51,Canada,87,35.0,Manitoba
+52,Argentina,83,32.1,San Juan
+53,New Zealand,90,54.6,Hawke's Bay
+54,Chile,85,40.9,Cachapoal Valley
+55,US,88,32.7,California
+56,Germany,84,39.0,Rheingau
+57,Belgium,87,51.2,Hainaut
+58,France,86,43.5,Loire Valley
+59,Italy,83,37.8,Abruzzo
+60,Spain,89,50.0,La Rioja
+61,Australia,85,44.4,Queensland
+62,Canada,88,53.8,British Columbia
+63,Argentina,84,36.3,Mendoza
+64,New Zealand,90,58.9,Martinborough
+65,Chile,86,45.2,Leyda Valley
+66,US,81,34.5,Washington
+67,Germany,87,48.0,Pfalz
+68,Belgium,85,42.6,Liège
+69,France,88,46.3,Provence
+70,Italy,82,30.5,Molise
+71,Spain,87,39.8,Castilla-La Mancha
+72,Australia,86,37.2,Western Australia
+73,Canada,84,32.9,Alberta
+74,Argentina,89,54.2,Salta
+75,New Zealand,83,36.7,Gisborne
+76,Chile,88,43.1,Maule Valley
+77,US,84,31.3,Oregon
+78,Germany,82,36.0,Baden
+79,Belgium,88,52.6,East Flanders
+80,France,85,44.7,Champagne
+81,Italy,89,49.4,Trentino-Alto Adige
+82,Spain,86,38.5,Catalonia
+83,Australia,85,40.2,South Australia
+84,Canada,83,34.6,Ontario
+85,Argentina,90,56.8,Mendoza
+86,New Zealand,82,35.9,Hawke's Bay
+87,Chile,89,42.4,Rapel Valley
+88,US,85,29.5,Washington
+89,Germany,89,54.0,Rheinhessen
+90,Belgium,86,48.9,Limburg
+91,France,83,39.2,Alsace
+92,Italy,88,45.8,Piedmont
+93,Spain,84,36.1,Andalusia
+94,Australia,89,47.5,Victoria
+95,Canada,87,35.8,British Columbia
+96,Argentina,83,32.5,San Juan
+97,New Zealand,90,55.1,Martinborough
+98,Chile,85,41.6,Cachapoal Valley
+99,US,88,33.2,California
+100,Germany,85,39.8,Saar
+101,Belgium,87,50.3,Flemish Brabant
+102,France,86,43.0,Bordeaux
+103,Italy,82,38.7,Abruzzo
+104,Spain,89,48.0,La Mancha
+105,Australia,85,42.4,Tasmania
+106,Canada,88,53.6,Nova Scotia
+107,Argentina,84,37.1,Mendoza
+108,New Zealand,89,58.3,Marlborough
+109,Chile,86,46.2,Leyda Valley
+110,US,82,34.7,Oregon
+111,Germany,88,49.5,Württemberg
+112,Belgium,86,46.0,West Flanders
+113,France,83,38.2,Languedoc-Roussillon
+114,Italy,88,44.9,Veneto
+115,Spain,84,37.6,Castilla y León
+116,Australia,89,47.8,New South Wales
+117,Canada,87,35.3,Manitoba
+118,Argentina,83,32.4,San Juan
+119,New Zealand,90,54.7,Hawke's Bay
+120,Chile,85,40.5,Casablanca Valley
+121,US,88,32.9,California
+122,Germany,84,39.5,Rheingau
+123,Belgium,87,50.2,Hainaut
+124,France,86,43.5,Loire Valley
+125,Italy,83,37.8,Abruzzo
+126,Spain,89,49.8,La Rioja
+127,Australia,85,45.4,Queensland
+128,Canada,88,53.2,British Columbia
+129,Argentina,84,36.8,Mendoza
+130,New Zealand,90,58.9,Martinborough
+131,Chile,86,45.2,Leyda Valley
+132,US,81,34.5,Washington
+133,Germany,87,48.0,Pfalz
+134,Belgium,85,42.6,Liège
+135,France,88,46.3,Provence
+136,Italy,82,30.5,Molise
+137,Spain,87,39.8,Castilla-La Mancha
+138,Australia,86,37.2,Western Australia
+139,Canada,84,32.9,Alberta
+140,Argentina,89,54.2,Salta
+141,New Zealand,83,36.7,Gisborne
+142,Chile,88,43.1,Maule Valley
+143,US,84,31.3,Oregon
+144,Germany,82,36.0,Baden
+145,Belgium,88,52.6,East Flanders
+146,France,85,44.7,Champagne
+147,Italy,89,49.4,Trentino-Alto Adige
+148,Spain,86,38.5,Catalonia
+149,Australia,85,40.2,South Australia
+150,Canada,83,34.6,Ontario
+151,Argentina,90,56.8,Mendoza
+152,New Zealand,82,35.9,Hawke's Bay
+153,Chile,89,42.4,Rapel Valley
+154,US,85,29.5,Washington
+155,Germany,89,54.0,Rheinhessen
+156,Belgium,86,48.9,Limburg
+157,France,83,39.2,Alsace
+158,Italy,88,45.8,Piedmont
+159,Spain,84,36.1,Andalusia
+160,Australia,89,47.5,Victoria
+161,Canada,87,35.8,British Columbia
+162,Argentina,83,32.5,San Juan
+163,New Zealand,90,55.1,Martinborough
+164,Chile,85,41.6,Cachapoal Valley
+165,US,88,33.2,California
+166,Germany,85,39.8,Saar
+167,Belgium,87,50.3,Flemish Brabant
+168,France,86,43.0,Bordeaux
+169,Italy,82,38.7,Abruzzo
+170,Spain,89,48.0,La Mancha
+171,Australia,85,42.4,Tasmania
+172,Canada,88,53.6,Nova Scotia
+173,Argentina,84,37.1,Mendoza
+174,New Zealand,89,58.3,Marlborough
+175,Chile,86,46.2,Leyda Valley
+176,US,82,34.7,Oregon
+177,Germany,88,49.5,Württemberg
+178,Belgium,86,46.0,West Flanders
+179,France,83,38.2,Languedoc-Roussillon
+180,Italy,88,44.9,Veneto
+181,Spain,84,37.6,Castilla y León
+182,Australia,89,47.8,New South Wales
+183,Canada,87,35.3,Manitoba
+184,Argentina,83,32.4,San Juan
+185,New Zealand,90,54.7,Hawke's Bay
+186,Chile,85,40.5,Casablanca Valley
+187,US,88,32.9,California
+188,Germany,84,39.5,Rheingau
+189,Belgium,87,50.2,Hainaut
+190,France,86,43.5,Loire Valley
+191,Italy,83,37.8,Abruzzo
+192,Spain,89,49.8,La Rioja
+193,Australia,85,45.4,Queensland
+194,Canada,88,53.2,British Columbia
+195,Argentina,84,36.8,Mendoza
+196,New Zealand,90,58.9,Martinborough
+197,Chile,86,45.2,Leyda Valley
+198,US,81,34.5,Washington
+199,Germany,87,48.0,Pfalz
+200,Belgium,85,42.6,Liège
