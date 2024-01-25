@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Map;
 
+import static com.example.homework2.util.WineUtil.*;
+
 @RestController
 @RequestMapping("wine")
 public class WineController {
@@ -62,23 +64,4 @@ public class WineController {
 
         return wineList;
     }
-
-    private List<Wine> sortByPoints(List<Wine> wineList) {
-        return wineList.stream()
-                .sorted((a, b) -> b.getPointsInt() - a.getPointsInt())
-                .toList();
-    }
-
-    private List<Wine> sortByPrice(List<Wine> wineList) {
-        return wineList.stream()
-                .sorted((a, b) -> (int) ((b.getPriceDouble() - a.getPriceDouble()) * 10))
-                .toList();
-    }
-
-    private List<Wine> filterByCountry(List<Wine> wineList, String country) {
-        return wineList.stream()
-                .filter(w -> w.country().equals(country))
-                .toList();
-    }
-
 }
