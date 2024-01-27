@@ -61,18 +61,18 @@ public class WineController {
         //取得結果: 全てのワインのリスト
         List<Wine> resultWinelist = wineList;
         //取得結果: イタリア産のワインの中で、価格が高い順にソートされたワインのリスト
-        if (body.containsKey("country") && body.containsKey("sort")) {
+        if (body.containsValue("Italy") && body.containsValue("price")) {
             resultWinelist = wineList.stream()
                     .filter(w -> w.country().equals("Italy"))
                     .sorted((a, b) -> b.getPointsInt() - a.getPointsInt())
                     .toList();
         //取得結果: アメリカ産のワインのリスト
-        } else if (body.containsKey("country")) {
+        } else if (body.containsValue("US")) {
             resultWinelist = wineList.stream()
                     .filter(w -> w.country().equals("US"))
                     .toList();
         //取得結果: 評価が高い順にソートされたワインのリスト
-        } else if (body.containsKey("sort")) {
+        } else if (body.containsValue("points")) {
             resultWinelist = wineList.stream()
                     .sorted((a, b) -> b.getPointsInt() - a.getPointsInt())
                     .toList();
