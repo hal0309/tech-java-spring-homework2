@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Map;
 
+import static com.example.homework2.util.WineUtil.*;
+
 @RestController
 @RequestMapping("wine")
 public class WineController {
@@ -38,62 +40,28 @@ public class WineController {
         return rawCsvList;
     }
 
-
-
-
-
-//    /** wineクラスのリストを返す(ソート・フィルタ機能付き) */
-//    @GetMapping("getWineList")
-//    public List<Wine> getWineList(
-//            @RequestBody Map<String, String> body
-//    ){
-//        // テスト出力
-//        System.out.println(body.toString());
-//
-//        // todo: ここにソート・フィルタ機能を実装
-//
-//        return wineList;
-//    }
-
-
-    /* todo: -------------- 以下のエンドポイントは全て削除 ------------------------- */
-
-    /** wineクラスのリストを返す */
+    /** wineクラスのリストを返す(ソート・フィルタ機能付き) */
     @GetMapping("getWineList")
-    public List<Wine> getWineList(){
+    public List<Wine> getWineList(
+            @RequestBody Map<String, String> body
+    ){
+        // 元のwineListに影響を与えないように、wineListをコピー
+        List<Wine> wineList = this.wineList;
+
+        // bodyにcountryが含まれている場合、countryでフィルタ
+        if(body.containsKey("country")){
+            wineList = filterByCountry(wineList, body.get("country"));
+        }
+
+        // bodyにsortが含まれている場合、sortでソート
+        if(body.containsKey("sort")){
+            wineList = switch (body.get("sort")) {
+                case "points" -> sortByPoints(wineList);
+                case "price" -> sortByPrice(wineList);
+                default -> wineList;
+            };
+        }
+
         return wineList;
     }
-
-    /** wineクラスのリストを返す(ポイントでソート) */
-    @GetMapping("getWineListSortByPoints")
-    public List<Wine> getWineListSortByPoints() {
-        return wineList.stream()
-                .sorted((a, b) -> b.getPointsInt() - a.getPointsInt())
-                .toList();
-    }
-
-    /** wineクラスのリストを返す(アメリカ産のワインのみ) */
-    @GetMapping("getWineListUS")
-    public List<Wine> getWineListUS() {
-        return wineList.stream()
-                .filter(w -> w.country().equals("US"))
-                .toList();
-    }
-
-    /** wineクラスのリストを返す(イタリア産のワインのみ) */
-    @GetMapping("getWineListItaly")
-    public List<Wine> getWineListItaly() {
-        return wineList.stream()
-                .filter(w -> w.country().equals("Italy"))
-                .toList();
-    }
-
-    /** wineクラスのリストを返す(価格でソート) */
-    @GetMapping("getWineListSortByPrice")
-    public List<Wine> getWineListSortByPrice() {
-        return wineList.stream()
-                .sorted((a, b) -> (int) ((b.getPriceDouble() - a.getPriceDouble()) * 10))
-                .toList();
-    }
-
 }
