@@ -21,7 +21,7 @@ public class WineUtil {
 
     public static List<Wine> filterByCountry(List<Wine> wineList, String country) {
         return wineList.stream()
-                .filter(w -> w.country().equals(country))
+                .filter(w -> w.getCountry().equals(country))
                 .toList();
     }
 }
