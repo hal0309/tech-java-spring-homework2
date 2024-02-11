@@ -46,8 +46,13 @@ public class BeerController {
     /** beerクラスのリストを返す(ソート・フィルタ機能付き) */
     @GetMapping("getBeerList")
     public List<Beer> getBeerList(
-            @RequestBody Map<String, String> body
+            @RequestBody(required = false) Map<String, String> body
     ){
+
+        if(body == null){
+            return beerList;
+        }
+
         // 元のbeerListに影響を与えないように、beerListをコピー
         List<Beer> beerList = this.beerList;
 
@@ -61,7 +66,7 @@ public class BeerController {
             beerList = switch (body.get("sort")) {
                 case "points" -> sortByPoints(beerList);
                 case "price" -> sortByPrice(beerList);
-                default -> beerList;
+                default -> throw new IllegalArgumentException("sortの値が不正です");
             };
         }
 
